@@ -38,7 +38,7 @@ No database or API is used.
 
 
 
-\### Member 1 — Event Model \& Data Service
+\David — Event Model \& Data Service
 
 Branch: event-model-service
 
@@ -80,7 +80,7 @@ Responsibilities:
 
 
 
-\### Member 2 — UI Design \& Event Card Component
+\Thao — UI Design \& Event Card Component
 
 Branch: event-list-ui
 
@@ -120,7 +120,7 @@ Display:
 
 
 
-\### Member 3 — ViewModel \& Binding (Team Leader)
+\Shanea — ViewModel \& Binding (Team Leader)
 
 Branch: event-list-viewmodel
 
