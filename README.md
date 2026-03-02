@@ -1,154 +1,95 @@
-\# Campus Activity Manager — Team 2 (Event List Screen)
+# Campus Activity Manager — Team 2 (Event List Screen)
 
+## Project Overview
 
+This repository contains the Event List Screen module of the Campus Activity Manager mobile application, developed using .NET MAUI.
 
-\## Project Overview
+The purpose of this module is to display a list of campus events in a clear and user-friendly interface. Each event will show important information such as the title, date, location, and image.
 
-
-
-This module implements the Event List Screen for the Campus Activity Manager mobile application using .NET MAUI.
-
-
-
-The screen displays a list of campus events using:
-
-
-
-\- MVVM architecture
-
-\- XAML UI
-
-\- CollectionView
-
-\- Data binding
-
-\- Mock data service
-
-
-
-No database or API is used.
-
-
+This module follows the MVVM (Model-View-ViewModel) architecture and uses mock data (no database or API required).
 
 ---
 
+## Technologies Used
 
+- .NET MAUI
+- C#
+- XAML
+- MVVM Architecture
+- CollectionView
+- ObservableCollection
+- Command Binding
+- Git & GitHub for collaboration
 
-\## Team Members and Responsibilities
+---
 
+## Team Members and Responsibilities
 
+Each member must work in their own branch and only on their assigned files.
 
-\David — Event Model \& Data Service
+---
 
-Branch: event-model-service
-
-
+David — Model & Data Service   
+Branch name: `event-model-service`
 
 Responsibilities:
 
+- Create folder: `Models`
+- Create file: `Models/Event.cs`
+- Define Event properties such as:
+  - Id
+  - Title
+  - Description
+  - Date
+  - Location
+  - Image
+  - Category
+  - IsRegistered
 
+- Create folder: `Services`
+- Create file: `Services/EventService.cs`
+- Implement mock data
+- Return a list of events
 
-\- Create Models/Event.cs
-
-\- Define event properties:
-
-&nbsp; - Id
-
-&nbsp; - Title
-
-&nbsp; - Description
-
-&nbsp; - Date
-
-&nbsp; - Location
-
-&nbsp; - Image
-
-&nbsp; - Category
-
-&nbsp; - IsRegistered
-
-
-
-\- Create Services/EventService.cs
-
-\- Provide mock event data
-
-
+This member must push first.
 
 ---
 
-
-
-\Thao — UI Design \& Event Card Component
-
-Branch: event-list-ui
-
-
+Shanea — ViewModel (Team Leader)   
+Branch name: `event-list-viewmodel`
 
 Responsibilities:
 
+- Create folder: `ViewModels`
+- Create file: `ViewModels/EventListViewModel.cs`
+- Create ObservableCollection<Event>
+- Connect EventService to ViewModel
+- Implement commands
+- Handle event selection logic
+- Prepare data for UI binding
 
-
-\- Create Views/EventListPage.xaml
-
-\- Design UI using CollectionView
-
-\- Create reusable component:
-
-
-
-Components/EventCard.xaml
-
-
-
-Display:
-
-
-
-\- Event image
-
-\- Title
-
-\- Date
-
-\- Location
-
-
+This member pushes after the Model & Service member.
 
 ---
 
-
-
-\Shanea — ViewModel \& Binding (Team Leader)
-
-Branch: event-list-viewmodel
-
-
+Thao— UI Design & Components   
+Branch name: `event-list-ui`
 
 Responsibilities:
 
+- Create folder: `Views`
+- Create file: `Views/EventListPage.xaml`
 
+- Create folder: `Components`
+- Create reusable component:
+  - `Components/EventCard.xaml`
 
-\- Create ViewModels/EventListViewModel.cs
+- Use CollectionView to display events
+- Bind UI to EventListViewModel
+- Display event image, title, date, and location
 
-\- Create ObservableCollection<Event>
-
-\- Connect EventService
-
-\- Bind data to UI
-
-\- Implement event selection command
-
-
+This member pushes last.
 
 ---
 
-
-
-\## Project Structure
-
-
-
-
-
+## Project Structure 
