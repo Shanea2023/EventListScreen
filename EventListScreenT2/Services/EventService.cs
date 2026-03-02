@@ -15,7 +15,7 @@ public class EventService
                 Description = "A grand musical event to welcome all new students to the campus.",
                 Date = DateTime.Now.AddDays(5),
                 Location = "Main Auditorium A",
-                Image = "dotnet_bot.png",
+                Image = "freshman_welcome.jpg", 
                 Category = "Music",
                 IsRegistered = false
             },
@@ -26,7 +26,7 @@ public class EventService
                 Description = "Hands-on session on building smart mobile apps using .NET MAUI and AI.",
                 Date = DateTime.Now.AddDays(10),
                 Location = "IT Lab 02",
-                Image = "dotnet_bot.png",
+                Image = "ai_workshop.jpg", 
                 Category = "Education",
                 IsRegistered = true
             },
@@ -37,7 +37,7 @@ public class EventService
                 Description = "Annual marathon for health and community spirit.",
                 Date = DateTime.Now.AddDays(15),
                 Location = "Stadium",
-                Image = "dotnet_bot.png",
+                Image = "campus_marathon.jpg", 
                 Category = "Sports",
                 IsRegistered = false
             }
