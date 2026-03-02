@@ -7,7 +7,7 @@ public class Event
     public string Description { get; set; }
     public DateTime Date { get; set; }
     public string Location { get; set; }
-    public string Image { get; set; } 
+    public string Image { get; set; }
     public string Category { get; set; }
     public bool IsRegistered { get; set; }
 }
