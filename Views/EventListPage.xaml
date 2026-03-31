@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Campus.Views.EventListPage"
+             Title="Campus Events"
+             BackgroundColor="#F7FAFC">
+
+    <Grid RowDefinitions="Auto, *" Padding="0">
+
+        <!-- HEADER -->
+        <VerticalStackLayout Grid.Row="0" 
+                             BackgroundColor="#00697F" 
+                             Padding="20,15">
+            <Label Text="🎓 Campus Events"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"/>
+            <Label Text="Discover upcoming events near you"
+                   FontSize="13"
+                   TextColor="#B2DFDB"
+                   HorizontalOptions="Center"
+                   Margin="0,5,0,0"/>
+        </VerticalStackLayout>
+
+        <!-- EVENT LIST AREA -->
+        <CollectionView Grid.Row="1"
+                        x:Name="EventsCollection"
+                        Margin="10,10,10,0"
+                        SelectionMode="Single">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="12"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border StrokeThickness="0"
+                            StrokeShape="RoundRectangle 15"
+                            BackgroundColor="White"
+                            Padding="15"
+                            Shadow="{OnPlatform Default='0,2,8,#15000000'}">
+
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="{Binding Title}"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#1A202C"/>
+                            <Label Text="{Binding Description}"
+                                   FontSize="13"
+                                   TextColor="#718096"
+                                   MaxLines="2"/>
+                            <HorizontalStackLayout Spacing="8" Margin="0,5,0,0">
+                                <Label Text="📍" FontSize="12"/>
+                                <Label Text="{Binding Location}"
+                                       FontSize="12"
+                                       TextColor="#4A5568"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="📅" FontSize="12"/>
+                                <Label Text="{Binding DateTime, StringFormat='{0:dd MMM yyyy, HH:mm}'}"
+                                       FontSize="12"
+                                       TextColor="#4A5568"/>
+                            </HorizontalStackLayout>
+                            <Border StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 8"
+                                    BackgroundColor="#E6FFFA"
+                                    Padding="8,4"
+                                    HorizontalOptions="Start"
+                                    Margin="0,5,0,0">
+                                <Label Text="{Binding Category}"
+                                       FontSize="11"
+                                       TextColor="#00697F"
+                                       FontAttributes="Bold"/>
+                            </Border>
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>
