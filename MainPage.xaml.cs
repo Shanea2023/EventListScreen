@@ -1,24 +1,24 @@
-﻿namespace Campus
+﻿using Campus.Services;
+using System.Diagnostics;
+
+namespace Campus;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        int count = 0;
+        InitializeComponent();
+        TestService();
+    }
 
-        public MainPage()
+    private async void TestService()
+    {
+        var service = new MockEventService();
+        var events = await service.GetEventsAsync();
+
+        foreach (var ev in events)
         {
-            InitializeComponent();
-        }
-
-        private void OnCounterClicked(object? sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            Debug.WriteLine($"[TEAM 2] Event: {ev.Title} | Location: {ev.Location} | Category: {ev.Category}");
         }
     }
 }
